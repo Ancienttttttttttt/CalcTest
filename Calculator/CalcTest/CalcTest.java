@@ -2,51 +2,39 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class CalcTest extends Calc{
+public class CalcTest {
+    Calc calc = new Calc();
+    int act;
+    int otvet;
     @Test
     public void sqPerimetertest() {
-        int a = sqPerimeter(5);
-        if (a == 20) {
-            System.out.println("Ok");
-        } else {
-            System.out.println("Error");
-        }
+        act = calc.sqPerimeter(5);
+        otvet = 20;
+        assertEquals(otvet, act);
     }
     @Test
     public void addtest() {
-        int a = add(5, 2);
-        if (a == 7) {
-            System.out.println("Ok");
-        } else {
-            System.out.println("Error");
-        }
+        act = calc.add(5, 2);
+        otvet = 7;
+        assertEquals(otvet, act);
     }
     @Test
     public void minustest() {
-        int a = minus(8, 5);
-        if (a == 3) {
-            System.out.println("Ok");
-        } else {
-            System.out.println("Error");
-        }
+        act = calc.minus(8, 5);
+        otvet = 3;
+        assertEquals(otvet, act);
     }
     @Test
     public void multitest() {
-        int a = multi(5, 5);
-        if (a == 25) {
-            System.out.println("Ok");
-        } else {
-            System.out.println("Error");
-        }
+        act = calc.multi(5, 5);
+        otvet = 25;
+        assertEquals(otvet, act);
     }
     @Test
     public void dividetest() {
-        int a = divide(6,3);
-        if (a == 2) {
-            System.out.println("Ok");
-        } else {
-            System.out.println("Error");
-        }
+        act = calc.divide(6,3);
+        otvet = 2;
+        assertEquals(otvet, act);
     }
 
 }
